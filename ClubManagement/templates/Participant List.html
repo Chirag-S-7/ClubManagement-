@@ -42,6 +42,7 @@
 
         {% if allowed == "no" %}
             <div class="title">Club Member List</div>
+            {% if part_list %}
             {% for part in part_list %}
             <div style="margin-bottom: 15px;">
                 <br>
@@ -58,6 +59,11 @@
                 <hr>            
             </div>
             {% endfor %}
+            {% else %}
+            <div style="text-align: center; margin: 15px 0 15px 0;">
+                <h4>No Members</h4>
+            </div>
+            {% endif%}
         {% endif %}
     </div>
 
